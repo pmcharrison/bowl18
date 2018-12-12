@@ -1,0 +1,18 @@
+Package: bowl18
+Title: Implementation of Bowling et al.'s (2018) Harmonicity Algorithm
+Version: 0.0.0.9000
+Authors@R: person("Peter", "Harrison", email = "pmc.harrison@gmail.com", role = c("aut", "cre"))
+Description: Implements Bowling et al.'s (2018) harmonicity algorithm.
+Depends: R (>= 3.4.0)
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    gmp,
+    hrep,
+    checkmate,
+    numbers
+Suggests: 
+    testthat
+Remotes: pmcharrison/hrep
+RoxygenNote: 6.1.0
