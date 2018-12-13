@@ -4,22 +4,16 @@ rational_chord <- function(x) {
   x
 }
 
-rationalise_chord <- function(x, verbose = FALSE) {
+rationalise_chord <- function(x) {
   UseMethod("rationalise_chord")
 }
 
-rationalise_chord.pi_chord <- function(x, verbose = FALSE) {
-  y <- hrep::normalise_bass(x) %>% sapply(rationalise_pitch) %>% rational_chord
-  if (verbose) {
-    message("- Chord: ",
-            paste(y[1, ], y[2, ], sep = "/") %>% paste(collapse = ", "),
-            ".")
-  }
-  y
+rationalise_chord.pi_chord <- function(x) {
+  hrep::normalise_bass(x) %>% sapply(rationalise_pitch) %>% rational_chord
 }
 
 rationalise_pitch <- function(x) {
-  checkmate::qassert(x, "N1")
+  checkmate::qassert(x, "X1")
   octave <- floor(x / 12)
   pitch_class <- x %% 12
   fraction <- rationalise_pitch_class(pitch_class)
