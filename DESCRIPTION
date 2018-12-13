@@ -1,17 +1,23 @@
 Package: bowl18
-Title: Implementation of Bowling et al.'s (2018) Harmonicity Algorithm
+Title: Implementation of Bowling et al.'s (2018) Vocal Similarity Algorithms
 Version: 0.0.0.9000
 Authors@R: person("Peter", "Harrison", email = "pmc.harrison@gmail.com", role = c("aut", "cre"))
-Description: Implements Bowling et al.'s (2018) harmonicity algorithm.
+Description: Implements Bowling et al.'s (2018) vocal similarity algorithms.
 Depends: R (>= 3.4.0)
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+RdMacros: Rdpack
 Imports: 
     gmp,
     hrep,
     checkmate,
-    numbers
+    numbers,
+    Rdpack,
+    magrittr,
+    phonTools,
+    purrr,
+    methods
 Suggests: 
     testthat
 Remotes: pmcharrison/hrep
