@@ -16,8 +16,9 @@ bowl18_min_freq_dist(x)
 \item{x}{Chord to analyse.
 The default method assumes that the chord is expressed
 as a numeric vector of frequencies.
-This can be made explicit by using the \code{\link[hrep:pi_chord]{fr_chord}}
-function from the \code{hrep} package.}
+Representations from the hrep package
+(e.g. \code{\link[hrep]{pi_chord}()})
+can be used to analyse chords expressed as MIDI note numbers.}
 }
 \value{
 (Numeric scalar)
@@ -31,7 +32,9 @@ after Bowling et al. (2018).
 It makes no assumptions about the chord's tuning.
 }
 \examples{
-bowl18_min_freq_dist(hrep::fr_chord(c(220, 440, 560)))
+bowl18_min_freq_dist(c(220, 440, 560)) # processed as frequencies
+bowl18_min_freq_dist(hrep::fr_chord(c(220, 440, 560))) # same as above
+bowl18_min_freq_dist(hrep::pi_chord(c(60, 64, 67))) # MIDI note numbers
 }
 \references{
 \insertRef{Bowling2018}{bowl18}
