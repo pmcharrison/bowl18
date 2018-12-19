@@ -9,7 +9,8 @@ rationalise_chord <- function(x) {
 }
 
 rationalise_chord.pi_chord <- function(x) {
-  hrep::normalise_bass(x) %>% sapply(rationalise_pitch) %>% rational_chord
+  x <- hrep::tp(x, - hrep::get_bass_pi(x))
+  sapply(x, rationalise_pitch) %>% rational_chord
 }
 
 rationalise_pitch <- function(x) {
