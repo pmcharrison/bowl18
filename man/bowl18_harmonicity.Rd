@@ -2,22 +2,17 @@
 % Please edit documentation in R/bowl18-harmonicity.R
 \name{bowl18_harmonicity}
 \alias{bowl18_harmonicity}
-\alias{bowl18_harmonicity.default}
-\alias{bowl18_harmonicity.pi_chord}
 \title{Harmonicity}
 \usage{
-bowl18_harmonicity(x)
-
-\method{bowl18_harmonicity}{default}(x)
-
-\method{bowl18_harmonicity}{pi_chord}(x)
+bowl18_harmonicity(x, tonic = 0L)
 }
 \arguments{
-\item{x}{Chord to analyse.
-The default method assumes that the chord is expressed
-as a numeric vector of MIDI note numbers.
-This can be made explicit by using the \code{\link[hrep:pi_chord]{pi_chord}}
-function from the \code{hrep} package.}
+\item{x}{Chord to analyse,
+expressed as an integerish vector of MIDI note numbers,
+or more generally as any valid input to \code{\link[hrep:pi_chord]{pi_chord}}.}
+
+\item{tonic}{(Integerish scalar, default = 0L)
+Tonic to use when defining the just-tuned scale.}
 }
 \value{
 (Numeric scalar)
@@ -32,6 +27,8 @@ The algorithm assumes that chord pitches are precisely
 tuned to the just-tuned scale provided by Bowling et al. (2018).
 }
 \examples{
+bowl18_harmonicity(c(60, 64, 67))
+bowl18_harmonicity("60 64 67")
 bowl18_harmonicity(hrep::pi_chord(c(60, 64, 67)))
 }
 \references{

@@ -1,15 +1,20 @@
+# These functions assume that we are in the key of C
+# (i.e. pitch-class 0 is the tonic).
+
 rational_chord <- function(x) {
   stopifnot(is.matrix(x), is.numeric(x), nrow(x) == 2L)
   class(x) <- "rational_chord"
   x
 }
 
-rationalise_chord <- function(x) {
+rationalise_chord <- function(x, tonic) {
   UseMethod("rationalise_chord")
 }
 
-rationalise_chord.pi_chord <- function(x) {
-  x <- hrep::tp(x, - hrep::get_bass_pi(x))
+rationalise_chord.pi_chord <- function(x, tonic) {
+  x <- hrep::tp(x, - tonic)
+  octave <- floor(hrep::get_bass_pi(x) / 12)
+  x <- hrep::tp(x, - 12 * octave)
   sapply(x, rationalise_pitch) %>% rational_chord
 }
 
