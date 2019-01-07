@@ -37,5 +37,5 @@ rationalise_pitch <- function(x) {
 
 rationalise_pitch_class <- function(pc) {
   checkmate::qassert(pc, "X1[0,12)")
-  fraction(.rational_scale[, pc + 1L])
+  fraction(rational_scale[, pc + 1L])
 }

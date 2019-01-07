@@ -24,17 +24,18 @@ Bowling et al. (2018) formalise two aspects of a musical chord’s ‘vocal
 similarity’:
 
 1)  Its similarity to the harmonic series, assessed with the
-    `bowl18_harmonicity()` function;
+    `gill09_harmonicity()` function;
 2)  The absence of small frequency intervals, assessed with the
     `bowl18_min_freq_dist()` function.
 
-### bowl18\_harmonicity
+### gill09\_harmonicity
 
-`bowl18_harmonicity()` measures a chord’s similarity to a harmonic
-series. It assumes that chord pitches are precisely aligned with the
-just-tuned scale provided by Bowling et al. (2018).
+`gill09_harmonicity()` measures a chord’s similarity to a harmonic
+series, after Gill & Purves (2009). It assumes that chord pitches are
+precisely aligned with the just-tuned scale provided by Bowling et al.
+(2018).
 
-By default, `bowl18_harmonicity` assumes that the input is a vector of
+By default, `gill09_harmonicity` assumes that the input is a vector of
 MIDI pitch numbers. We recommend using the `hrep` package to clarify
 this input format, as follows:
 
@@ -47,15 +48,15 @@ pi_chord(c(60, 64, 67)) # C major chord
 #> Pitch chord: 60 64 67
 
 # Major chord
-bowl18_harmonicity(pi_chord(c(60, 64, 67)))
+gill09_harmonicity(pi_chord(c(60, 64, 67)))
 #> [1] 0.4666667
 
 # Diminished chord
-bowl18_harmonicity(pi_chord(c(60, 63, 66)))
+gill09_harmonicity(pi_chord(c(60, 63, 66)))
 #> [1] 0.4285714
 
 # Augmented chord
-bowl18_harmonicity(pi_chord(c(60, 64, 68)))
+gill09_harmonicity(pi_chord(c(60, 64, 68)))
 #> [1] 0.105
 ```
 
@@ -96,3 +97,7 @@ Bowling, D. L., Purves, D., & Gill, K. Z. (2018). Vocal similarity
 predicts the relative attraction of musical chords. Proceedings of the
 National Academy of Sciences, 115(1), 216–221.
 <https://doi.org/10.1073/pnas.1713206115>
+
+Gill, K. Z., & Purves, D. (2009). A biological rationale for musical
+scales. PLoS ONE, 4(12), 1–9.
+<https://doi.org/10.1371/journal.pone.0008144>

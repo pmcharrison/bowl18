@@ -1,4 +1,4 @@
-context("test-bowl18_harmonicity")
+context("test-gill09_harmonicity")
 
 test_that("regression tests: dyads", {
   df <- read.csv(system.file("reformatted-data/dyads.csv", package = "bowl18"),
@@ -7,7 +7,7 @@ test_that("regression tests: dyads", {
 
   for (i in seq_along(chords)) {
     expect_equal(df$bowling_harm_sim[i],
-                 bowl18_harmonicity(chords[[i]]),
+                 gill09_harmonicity(chords[[i]]),
                  tolerance = 1e-3)
   }
 })
@@ -22,7 +22,7 @@ test_that("regression tests: triads", {
   ind <- sample(length(chords), size = 20L)
   for (i in ind) {
     expect_equal(df$bowling_harm_sim[i],
-                 bowl18_harmonicity(chords[[i]]),
+                 gill09_harmonicity(chords[[i]]),
                  tolerance = 1e-3)
   }
 })
@@ -37,7 +37,7 @@ test_that("regression tests: tetrads", {
   ind <- sample(length(chords), size = 20L)
   for (i in ind) {
     expect_equal(df$bowling_harm_sim[i],
-                 bowl18_harmonicity(chords[[i]]),
+                 gill09_harmonicity(chords[[i]]),
                  tolerance = 1e-3)
   }
 })

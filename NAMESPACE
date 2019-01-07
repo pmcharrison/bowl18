@@ -2,7 +2,7 @@
 
 S3method(bowl18_min_freq_dist,default)
 S3method(bowl18_min_freq_dist,fr_chord)
-export(bowl18_harmonicity)
 export(bowl18_min_freq_dist)
+export(gill09_harmonicity)
 importFrom(magrittr,"%>%")
 importFrom(methods,"is")
