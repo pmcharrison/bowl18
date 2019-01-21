@@ -6,6 +6,8 @@
 [![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 [![Travis build
 status](https://travis-ci.org/pmcharrison/bowl18.svg?branch=master)](https://travis-ci.org/pmcharrison/bowl18)
+[![AppVeyor build
+status](https://ci.appveyor.com/api/projects/status/github/pmcharrison/bowl18?branch=master&svg=true)](https://ci.appveyor.com/project/pmcharrison/bowl18)
 [![Coverage
 status](https://coveralls.io/repos/github/pmcharrison/bowl18/badge.svg)](https://coveralls.io/r/pmcharrison/bowl18?branch=master)
 
