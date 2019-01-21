@@ -13,7 +13,7 @@ status](https://coveralls.io/repos/github/pmcharrison/bowl18/badge.svg)](https:/
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2545741.svg)](https://doi.org/10.5281/zenodo.2545741)
 
 The `bowl18` R package implements Bowling et al.’s (2018) vocal
-similarity algorithms.
+similarity algorithms. 
 
 ## Installation
 
