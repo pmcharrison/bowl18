@@ -10,6 +10,7 @@ status](https://travis-ci.org/pmcharrison/bowl18.svg?branch=master)](https://tra
 status](https://ci.appveyor.com/api/projects/status/github/pmcharrison/bowl18?branch=master&svg=true)](https://ci.appveyor.com/project/pmcharrison/bowl18)
 [![Coverage
 status](https://coveralls.io/repos/github/pmcharrison/bowl18/badge.svg)](https://coveralls.io/r/pmcharrison/bowl18?branch=master)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2545741.svg)](https://doi.org/10.5281/zenodo.2545741)
 
 The `bowl18` R package implements Bowling et al.’s (2018) vocal
 similarity algorithms.
