@@ -14,7 +14,9 @@ knitr::opts_chunk$set(
 ```
 # bowl18: Implementation of Bowling et al.'s (2018) Vocal Similarity Algorithms
 
-[![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
+[![Travis build status](https://travis-ci.org/pmcharrison/bowl18.svg?branch=master)](https://travis-ci.org/pmcharrison/bowl18)
+[![Coverage status](https://coveralls.io/repos/github/pmcharrison/bowl18/badge.svg)](https://coveralls.io/r/pmcharrison/bowl18?branch=master)
 
 The `bowl18` R package implements Bowling et al.'s (2018)
 vocal similarity algorithms.

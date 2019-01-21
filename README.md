@@ -3,7 +3,11 @@
 
 # bowl18: Implementation of Bowling et al.’s (2018) Vocal Similarity Algorithms
 
-[![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
+[![Travis build
+status](https://travis-ci.org/pmcharrison/bowl18.svg?branch=master)](https://travis-ci.org/pmcharrison/bowl18)
+[![Coverage
+status](https://coveralls.io/repos/github/pmcharrison/bowl18/badge.svg)](https://coveralls.io/r/pmcharrison/bowl18?branch=master)
 
 The `bowl18` R package implements Bowling et al.’s (2018) vocal
 similarity algorithms.
@@ -20,7 +24,7 @@ devtools::install_github("bowl18")
 
 ## Usage
 
-Bowling et al. (2018) formalise two aspects of a musical chord’s ‘vocal
+Bowling et al. (2018) formalise two aspects of a musical chord’s ‘vocal
 similarity’:
 
 1)  Its similarity to the harmonic series, assessed with the
@@ -32,8 +36,8 @@ similarity’:
 
 `gill09_harmonicity()` measures a chord’s similarity to a harmonic
 series, after Gill & Purves (2009). It assumes that chord pitches are
-precisely aligned with the just-tuned scale provided by Bowling et al.
-(2018).
+precisely aligned with the just-tuned scale provided by Bowling et
+al. (2018).
 
 By default, `gill09_harmonicity` assumes that the input is a vector of
 MIDI pitch numbers. We recommend using the `hrep` package to clarify
@@ -88,7 +92,7 @@ bowl18_min_freq_dist(fr_chord(pi_chord(c(60, 61, 62))))
 #> [1] 15.55707
 ```
 
-Bowling et al. (2018) argue that, in particular, frequency differences
+Bowling et al. (2018) argue that, in particular, frequency differences
 smaller than 50 Hz contribute negatively to consonance.
 
 ## References

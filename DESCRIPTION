@@ -19,6 +19,7 @@ Imports:
     purrr,
     methods
 Suggests: 
-    testthat
+    testthat,
+    covr
 Remotes: pmcharrison/hrep
 RoxygenNote: 6.1.0
